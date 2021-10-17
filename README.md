@@ -7,7 +7,42 @@ I love the [Kotlin](https://kotlinlang.org/) and [Spek framework](https://www.sp
 I want to get "out of the box" only one thing - it's text specification files (something like in [Cucumber](https://cucumber.io/)).
 
 ## Install
-TBD
+## Gradle
+1. Add repository
+  ```groovy
+    repositories {
+      maven {
+        url = uri("https://maven.pkg.github.com/paslavsky/spec-repo")
+      }
+    }
+  ```
+2. Add dependency
+  ```groovy
+  dependencies {
+    testImplementation 'com.github.paslavsky:spec-report:<version>'
+  }
+  ```
+## Maven
+1. Add repository
+  ```xml
+  <distributionManagement>
+     <repository>
+       <id>spec-report</id>
+       <name>Scec report repository</name>
+       <url>https://maven.pkg.github.com/paslavsky/spec-report</url>
+     </repository>
+  </distributionManagement>
+  ```
+2. Add dependency
+```xml
+<dependencies>
+  <dependency>
+    <groupId>com.github.paslavsky</groupId>
+    <artifactId>spec-report</artifactId>
+    <version>${spec-report.version}</version>
+  </dependency>
+</dependencies>
+```
 
 ## Use
 Please create your abstract class for basic Spek tests, for example:
