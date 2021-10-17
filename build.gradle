@@ -40,6 +40,14 @@ publishing {
     publications {
         gpr(MavenPublication) {
             from(components.java)
+            artifact tasks.sourceJar
         }
     }
 }
+
+task sourceJar(type: Jar) {
+    archiveClassifier.convention('sources')
+    from sourceSets.main.allSource
+}
+
+tasks.build.dependsOn('sourceJar')
