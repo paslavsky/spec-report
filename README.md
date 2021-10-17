@@ -12,7 +12,7 @@ I want to get "out of the box" only one thing - it's text specification files (s
   ```groovy
     repositories {
       maven {
-        url = uri("https://maven.pkg.github.com/paslavsky/spec-repo")
+        url = uri("https://maven.pkg.github.com/paslavsky/spec-report")
       }
     }
   ```
