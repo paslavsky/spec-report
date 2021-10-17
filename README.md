@@ -7,7 +7,7 @@ I love the [Kotlin](https://kotlinlang.org/) and [Spek framework](https://www.sp
 I want to get "out of the box" only one thing - it's text specification files (something like in [Cucumber](https://cucumber.io/)).
 
 ## Install
-## Gradle
+### Gradle
 1. Add repository
   ```groovy
     repositories {
@@ -22,7 +22,7 @@ I want to get "out of the box" only one thing - it's text specification files (s
     testImplementation 'com.github.paslavsky:spec-report:<version>'
   }
   ```
-## Maven
+### Maven
 1. Add repository
   ```xml
   <distributionManagement>
