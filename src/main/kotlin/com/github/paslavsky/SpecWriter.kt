@@ -11,7 +11,7 @@ object SpecWriter : LifecycleListener {
     override fun afterExecuteTest(test: TestScope, result: ExecutionResult) = close(test, result)
 
     private fun close(scope: Scope, r: ExecutionResult) {
-        val node = SpecNode.roots.resolve(scope.path).apply {
+        val node = SpecNode.roots.resolve(scope).apply {
             result = r
         }
         if (node.parent == null) {
